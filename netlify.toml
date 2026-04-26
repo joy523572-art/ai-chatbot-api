@@ -1,3 +1,4 @@
+
 [build]
   command = ""
   publish = "public"
@@ -5,3 +6,11 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  enabled = false
+
+[functions]
+  node_bundler = "esbuild"
